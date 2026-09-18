@@ -21,3 +21,8 @@ ENTER
 DELAY 1000
 STRING INSTALL
 ENTER
+STRING wss://troll-control-api.onrender.com
+ENTER
+DELAY 1000
+STRING Adminkey123
+ENTER
