@@ -1,5 +1,5 @@
 // Replace this with the public HTTPS URL of your persistent FastAPI backend.
-const API_BASE = "https://YOUR-BACKEND-DOMAIN";
+const API_BASE = "https://troll-control-api.onrender.com";
 let selected = null;
 const $ = s => document.querySelector(s);
 function token(){ return sessionStorage.getItem('trollControlToken') || ''; }
