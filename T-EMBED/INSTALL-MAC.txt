@@ -1,0 +1,25 @@
+Troll Control authorized, visible Mac setup
+===========================================
+
+Only use on a Mac you own or are explicitly authorized to administer. This is a
+visible setup helper, not a covert installer. Replace GITHUB_RELEASE_URL_HERE
+with your HTTPS release URL for TrollControl-mac.zip before loading this script.
+
+DuckyScript-style sequence (adapt key names/timing for your LilyGO T-Embed):
+
+REM User must be present and approve every macOS prompt.
+GUI SPACE
+DELAY 1000
+STRING Terminal
+DELAY 1000
+ENTER
+DELAY 1500
+STRING echo 'This installs Troll Control visibly. Review the prompt and type INSTALL only if authorized.'
+ENTER
+STRING curl -fL 'GITHUB_RELEASE_URL_HERE' -o ~/Downloads/TrollControl-mac.zip && ditto -x -k ~/Downloads/TrollControl-mac.zip ~/Downloads && cd ~/Downloads/TrollControl-mac/MAC && chmod +x install.sh && ./install.sh
+ENTER
+
+The Terminal remains open and install.sh asks the Mac owner to type INSTALL.
+Do not automate that confirmation. Set the server and agent token in the app's
+launch configuration before packaging; never type credentials into an unattended
+keyboard script.
